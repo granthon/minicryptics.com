@@ -1,0 +1,26 @@
+{{/* content/puzzle/_content.gotmpl
+     Hugo content adapter: generates a page for each puzzle in the RSS feed.
+     Requires Hugo 0.126.0+
+     Docs: https://gohugo.io/content-management/content-adapters/
+*/}}
+
+{{ $feed  := resources.GetRemote "https://crosshare.org/api/feed/tuber" }}
+{{ $xml   := $feed | transform.Unmarshal }}
+{{ $items := $xml.channel.item }}
+
+{{ warnf "Adapter running, items: %v" (len $items) }}
+
+{{ range $items }}
+  {{ $parts    := split (strings.TrimSpace .link) "/" }}
+  {{ $id       := index $parts (sub (len $parts) 2) }}
+  {{ $pubdate  := time.AsTime .pubDate }}
+
+  {{ $.AddPage (dict
+    "kind"    "page"
+    "type"    "puzzle"
+    "path"    (lower $id)
+    "title"   .title
+    "date"    $pubdate
+    "params"  (dict "puzzleid" $id)
+  ) }}
+{{ end }}

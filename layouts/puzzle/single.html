@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="back">← All puzzles</a>
+    <h1>{{ .Title }}</h1>
+    {{ with .Date }}<p class="puzzle-date">{{ .Format "2 Jan 2006" }}</p>{{ end }}
+  </header>
+  <main class="puzzle-page">
+    <iframe
+      src="https://crosshare.org/embed/{{ .Params.puzzleid }}/{{ .Site.Params.crosshareUser }}"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </main>
+  <footer>
+    <p><a href="https://crosshare.org/crosswords/{{ .Params.puzzleid }}">Play on Crosshare</a>
+    · <a href="/">More puzzles</a></p>
+  </footer>
+</body>
+</html>

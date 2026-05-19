@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Mini Cryptics</h1>
+    <p>Small cryptic crosswords by tuber</p>
+  </header>
+  <main>
+    {{/*
+      Fetch the RSS feed at build time.
+      Each <item> in the feed looks roughly like:
+        <title>Puzzle Title</title>
+        <link>https://crosshare.org/crosswords/PUZZLE_ID/puzzle-slug</link>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+      We extract the puzzle ID from the link to build the embed URL:
+        https://crosshare.org/embed/PUZZLE_ID
+    */}}
+    {{ $feed  := resources.GetRemote "https://crosshare.org/api/feed/tuber" }}
+    {{ $xml   := $feed | transform.Unmarshal }}
+    {{ $items := $xml.channel.item }}
+
+    <ol class="puzzle-list">
+      {{ range $items }}
+        {{ $parts   := split (strings.TrimSpace .link) "/" }}
+        {{ $id      := index $parts (sub (len $parts) 2) }}
+        {{ $pubdate := time.AsTime .pubDate }}
+        <li>
+          <a href="/puzzle/{{ lower $id }}/">
+            <span class="puzzle-title">{{ .title }}</span>
+            <span class="puzzle-date">{{ $pubdate.Format "2 Jan 2006" }}</span>
+          </a>
+        </li>
+      {{ end }}
+    </ol>
+  </main>
+  <footer>
+    <p>Puzzles also on <a href="https://crosshare.org/tuber">Crosshare</a></p>
+  </footer>
+</body>
+</html>
