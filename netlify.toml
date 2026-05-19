@@ -1,5 +1,5 @@
 [build]
-  command = "hugo"
+  command = "pip install pyyaml --quiet && python3 update_puzzles.py && hugo"
   publish = "public"
 
 [build.environment]

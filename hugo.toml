@@ -1,6 +1,7 @@
 baseURL = "https://minicryptics.com/"
-languageCode = "en-gb"
+locale = "en-gb"
 title = "Mini Cryptics"
+disableKinds = ["section", "taxonomy", "term"]
 
 [params]
     crosshareUser = "f27wo8YkW8cgES1kA2gUlbLJSL73"
