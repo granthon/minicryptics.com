@@ -31,7 +31,7 @@ def parse_items(xml_bytes):
         parts = link.rstrip("/").split("/")
         # URL: /crosswords/PUZZLE_ID/slug
         puzzle_id = parts[-2]
-        items.append({"id": puzzle_id, "title": title, "date", pub_date})
+        items.append({"id": puzzle_id, "title": title, "date": pub_date})
     return items
 
 
