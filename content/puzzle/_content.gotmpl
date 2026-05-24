@@ -11,5 +11,6 @@
     "title"  .title
     "date"   (time.AsTime .date)
     "params" (dict "puzzleid" .id)
+    "description" (printf "%s — a mini cryptic crossword. Free to solve online." .title)
   ) }}
 {{ end }}

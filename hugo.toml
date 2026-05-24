@@ -1,6 +1,7 @@
 baseURL = "https://minicryptics.com/"
 locale = "en-gb"
 title = "Mini Cryptics"
+description = "Free mini cryptic crosswords, on five-by-five grids — quick to solve, but the wordplay still bites."
 disableKinds = ["section", "taxonomy", "term"]
 
 [params]
