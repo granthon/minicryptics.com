@@ -48,6 +48,40 @@ header > p {
   color: var(--muted);
 }
 
+.about-link {
+  margin-left: 0.35rem;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+}
+
+.about-link:hover { text-decoration: underline; }
+
+/* CSS-only toggle: grid-rows 0fr→1fr gives a smooth height transition */
+.about {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
+}
+
+.about > * { overflow: hidden; min-height: 0; }
+
+.about p {
+  max-width: 70ch;
+  line-height: 1.5;
+  color: var(--ink);
+  font-size: .9rem;
+}
+
+#about-toggle:checked ~ .about {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 0.8rem;
+}
+
 a.back {
   display: inline-block;
   margin-bottom: 0.75rem;
