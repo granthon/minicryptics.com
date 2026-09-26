@@ -26,7 +26,7 @@
         <li>
           <a href="/puzzle/{{ lower .id }}/">
             <span class="puzzle-title">{{ .title }}</span>
-	    <span class="puzzle-date">{{ (time.AsTime .date).Format "2 Jan 2006" }}</span>
+	    <span class="puzzle-date">{{ (time.AsTime (replace .date " GMT" " +0000")).Format "2 Jan 2006" }}</span>
           </a>
         </li>
       {{ end }}

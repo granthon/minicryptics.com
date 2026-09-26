@@ -6,3 +6,6 @@ disableKinds = ["section", "taxonomy", "term"]
 [params]
     crosshareUser = "f27wo8YkW8cgES1kA2gUlbLJSL73"
     description = "Free mini cryptic crosswords, on five-by-five grids — quick solves, satisfying wordplay."
+
+[outputFormats.RSS]
+    baseName = "feed"

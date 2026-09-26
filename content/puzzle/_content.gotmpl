@@ -9,7 +9,7 @@
     "type"   "puzzle"
     "path"   (lower .id)
     "title"  .title
-    "date"   (time.AsTime .date)
+    "dates"  (dict "date" (time.AsTime (replace .date " GMT" " +0000")))
     "params" (dict "puzzleid" .id)
     "description" (printf "%s — a mini cryptic crossword. Free to solve online." .title)
   ) }}
