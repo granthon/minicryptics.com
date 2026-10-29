@@ -10,7 +10,15 @@
         <h3>{{ title $dir }}</h3>
         <ol>
           {{ range where $d.clues "dir" $dir }}
-            <li><b>{{ .num }}</b> <span>{{ .clue | markdownify }}</span></li>
+            {{/* Linked clues arrive as "and 4D. ..." or ", 9A, 11A. ..."; move the links into the label */}}
+            {{ $label := string .num }}
+            {{ $text := .clue }}
+            {{ with findRESubmatch `^\s*(?:and\s+|,\s*)?((?:\d+\s*[AaDd]\b[\s,]*(?:and\s+)?)+)\.\s*(.*)$` .clue 1 }}
+              {{ $m := index . 0 }}
+              {{ $label = printf "%s, %s" $label (replaceRE `\s*(?:,|and)\s*` ", " (trim (index $m 1) " ,")) }}
+              {{ $text = index $m 2 }}
+            {{ end }}
+            <li><b>{{ upper $label }}</b> <span>{{ $text | markdownify }}</span></li>
           {{ end }}
         </ol>
       </div>

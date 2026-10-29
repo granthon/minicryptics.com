@@ -166,17 +166,49 @@ section.clues h3 {
 
 .clue-columns li b { flex-shrink: 0; }
 
-section.clues li b { display: inline-block; min-width: 2rem; color: var(--accent); }
+section.clues li b { margin-right: 0.5rem; color: var(--accent); }
 
-section.notes { margin-top: 2rem; line-height: 1.5; }
+details.notes { margin-top: 2rem; line-height: 1.5; }
 
-section.notes h2 {
+details.notes summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+details.notes summary::-webkit-details-marker { display: none; }
+
+/* Chevron from two borders of a rotated square: points right, then down when open */
+details.notes summary::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  position: relative;
+  top: -2px;
+  transform: rotate(-45deg);
+  transition: transform 0.2s;
+}
+
+details.notes[open] summary::before { transform: rotate(45deg); }
+
+details.notes h2 {
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--accent);
   font-size: 1.6rem;
 }
 
-section.notes p { margin-top: 0.75rem; max-width: 70ch; }
+details.notes p { margin-top: 0.75rem; max-width: 70ch; }
+
+details.notes ul { list-style: none; margin-top: 0.4rem; max-width: 70ch; }
+
+details.notes li { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }
+
+details.notes li strong { flex-shrink: 0; min-width: 1.5rem; color: var(--accent); }
 
 /* ||spoilers|| in setter's notes: hidden until hovered or tapped */
 .spoiler {

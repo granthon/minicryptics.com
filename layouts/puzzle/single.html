@@ -21,11 +21,11 @@
     ></iframe>
     {{ partial "clues.html" . }}
     {{ with .Content }}
-    <section class="notes">
-      <h2>Setter’s notes</h2>
+    <details class="notes">
+      <summary><h2>Setter’s notes</h2></summary>
       {{/* ||spoiler|| markup, applied after Markdown rendering */}}
       {{ replaceRE `(?s)\|\|(.+?)\|\|` `<span class="spoiler" tabindex="0">$1</span>` . | safeHTML }}
-    </section>
+    </details>
     {{ end }}
   </main>
   <footer>
