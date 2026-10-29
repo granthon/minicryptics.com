@@ -19,6 +19,14 @@
       frameborder="0"
       allowfullscreen
     ></iframe>
+    {{ partial "clues.html" . }}
+    {{ with .Content }}
+    <section class="notes">
+      <h2>Setter’s notes</h2>
+      {{/* ||spoiler|| markup, applied after Markdown rendering */}}
+      {{ replaceRE `(?s)\|\|(.+?)\|\|` `<span class="spoiler" tabindex="0">$1</span>` . | safeHTML }}
+    </section>
+    {{ end }}
   </main>
   <footer>
     <p><a href="https://crosshare.org/crosswords/{{ .Params.puzzleid }}">Play on Crosshare</a>

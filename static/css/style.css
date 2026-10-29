@@ -137,6 +137,62 @@ main.puzzle-page iframe {
   display: block;
 }
 
+/* ── Clues and notes ── */
+
+section.clues { margin-top: 2rem; line-height: 1.5; }
+
+section.clues h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+section.clues h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.clue-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem 2rem;
+}
+
+.clue-columns ol { list-style: none; }
+
+.clue-columns li { display: flex; margin-bottom: 0.4rem; }
+
+.clue-columns li b { flex-shrink: 0; }
+
+section.clues li b { display: inline-block; min-width: 2rem; color: var(--accent); }
+
+section.notes { margin-top: 2rem; line-height: 1.5; }
+
+section.notes h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+section.notes p { margin-top: 0.75rem; max-width: 70ch; }
+
+/* ||spoilers|| in setter's notes: hidden until hovered or tapped */
+.spoiler {
+  background: var(--ink);
+  color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.spoiler:hover, .spoiler:focus {
+  background: transparent;
+  color: inherit;
+  outline: none;
+}
+
 /* ── Footer ── */
 
 footer {

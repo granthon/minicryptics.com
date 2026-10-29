@@ -4,13 +4,27 @@
 */}}
 
 {{ range hugo.Data.puzzles }}
+  {{/* Lead with the first clue so each page gets a distinct description */}}
+  {{ $title := .title }}
+  {{ $desc := printf "%s — a mini cryptic crossword. Free to solve online." $title }}
+  {{ with index (or hugo.Data.details dict) .id }}
+    {{ with index .clues 0 }}
+      {{ $desc = printf "%s — a mini cryptic crossword, free to solve online. %v Across: %s" $title .num .clue }}
+    {{ end }}
+  {{ end }}
+  {{/* Optional site-only notes: assets/notes/<lowercased id>.md becomes the page content */}}
+  {{ $content := dict }}
+  {{ with resources.Get (printf "notes/%s.md" (lower .id)) }}
+    {{ $content = dict "mediaType" "text/markdown" "value" .Content }}
+  {{ end }}
   {{ $.AddPage (dict
     "kind"   "page"
+    "content" $content
     "type"   "puzzle"
     "path"   (lower .id)
     "title"  .title
     "dates"  (dict "date" (time.AsTime (replace .date " GMT" " +0000")))
     "params" (dict "puzzleid" .id)
-    "description" (printf "%s — a mini cryptic crossword. Free to solve online." .title)
+    "description" $desc
   ) }}
 {{ end }}

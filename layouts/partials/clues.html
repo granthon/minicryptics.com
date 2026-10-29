@@ -1,0 +1,20 @@
+{{/* Clues as crawlable text, from data/details/<id>.json. */}}
+{{ $d := index (or hugo.Data.details dict) .Params.puzzleid }}
+{{ with $d }}
+<section class="clues">
+  <h2>Clues</h2>
+  <div class="clue-columns">
+    {{ range slice "across" "down" }}
+      {{ $dir := . }}
+      <div>
+        <h3>{{ title $dir }}</h3>
+        <ol>
+          {{ range where $d.clues "dir" $dir }}
+            <li><b>{{ .num }}</b> <span>{{ .clue | markdownify }}</span></li>
+          {{ end }}
+        </ol>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
