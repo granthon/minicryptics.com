@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — {{ .Site.Title }}</title>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="back">← All puzzles</a>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <main class="article">
+    {{ partial "spoilers.html" .Content }}
+  </main>
+  <footer>
+    <p><a href="/">Puzzles</a> &mdash; <a href="https://crosshare.org/tuber">Crosshare</a></p>
+  </footer>
+</body>
+</html>

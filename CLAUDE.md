@@ -28,13 +28,15 @@ Two things consume that manifest:
 1. **`content/puzzle/_content.gotmpl`** — a Hugo *content adapter* that calls `$.AddPage` once per manifest entry to synthesize a page (no Markdown files exist for puzzles). Page path is `(lower .id)`, so **URLs are the lowercased puzzle ID** even though the manifest stores the original mixed-case ID. The original-case ID is passed through as `.Params.puzzleid`.
 2. **`layouts/index.html`** — the homepage, which ranges over `hugo.Data.puzzles` directly to render the list.
 
+Ordinary Markdown pages in `content/` (such as `how-to-solve.md`, the beginner's guide) render with `layouts/single.html`.
+
 `layouts/puzzle/single.html` renders each puzzle page, and `layouts/partials/clues.html` adds the clues as crawlable text below the iframe. The content adapter also uses the first clue in each page's meta description.
 
-**Setter's notes** are unique to this site (deliberately *not* copied from Crosshare): write `assets/notes/<lowercased puzzle id>.md` (the URL slug) and the content adapter makes it the page's content, rendered under the clues. `||spoiler||` markup becomes `.spoiler` spans, applied *after* Markdown rendering (Goldmark would strip raw HTML).
+**Setter's notes** are unique to this site (deliberately *not* copied from Crosshare): write `assets/notes/<lowercased puzzle id>.md` (the URL slug) and the content adapter makes it the page's content, rendered under the clues. `||spoiler||` markup becomes `.spoiler` spans via the `spoilers.html` partial, applied *after* Markdown rendering (Goldmark would strip raw HTML). The guide page uses the same markup. Keep links out of spoilers, because they show through.
 
 The page embeds `https://crosshare.org/embed/{puzzleid}/{crosshareUser}` in an iframe. `crosshareUser` (the Crosshare author ID) lives in `hugo.toml` under `[params]`.
 
-`disableKinds = ["section", "taxonomy", "term"]` in `hugo.toml` keeps Hugo from generating section/tag/category pages — only the home page and the individual puzzle pages are wanted.
+`disableKinds = ["section", "taxonomy", "term"]` in `hugo.toml` keeps Hugo from generating section/tag/category pages — only the home page, the puzzle pages and standalone pages like the guide are wanted.
 
 ## SEO / head tags
 

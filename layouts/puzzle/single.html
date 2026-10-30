@@ -25,14 +25,14 @@
     {{ with .Content }}
     <details class="notes">
       <summary><h2>Setter’s notes</h2></summary>
-      {{/* ||spoiler|| markup, applied after Markdown rendering */}}
-      {{ replaceRE `(?s)\|\|(.+?)\|\|` `<span class="spoiler" tabindex="0">$1</span>` . | safeHTML }}
+      {{ partial "spoilers.html" . }}
     </details>
     {{ end }}
   </main>
   <footer>
     <p><a href="https://crosshare.org/crosswords/{{ .Params.puzzleid }}">Play on Crosshare</a>
-    · <a href="/">More puzzles</a></p>
+    · <a href="/">More puzzles</a>
+    · <a href="/how-to-solve/">How to solve cryptics</a></p>
   </footer>
 </body>
 </html>

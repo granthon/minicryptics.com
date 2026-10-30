@@ -1,0 +1,3 @@
+{{/* Renders ||spoiler|| markup in already-rendered HTML (Goldmark would strip raw spans) */}}
+{{ $html := replaceRE `(?s)\|\|(.+?)\|\|` `<span class="spoiler" tabindex="0">$1</span>` . }}
+{{ return (safeHTML $html) }}

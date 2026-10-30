@@ -57,6 +57,8 @@ header > p {
   user-select: none;
 }
 
+a.about-link { text-decoration: none; }
+
 .about-link:hover { text-decoration: underline; }
 
 /* CSS-only toggle: grid-rows 0fr→1fr gives a smooth height transition */
@@ -224,6 +226,44 @@ details.notes li strong { flex-shrink: 0; min-width: 1.5rem; color: var(--accent
   color: inherit;
   outline: none;
 }
+
+/* ── Article pages (e.g. how to solve) ── */
+
+main.article { line-height: 1.6; }
+
+main.article > * { max-width: 70ch; }
+
+main.article p, main.article ul { margin-bottom: 1rem; }
+
+main.article ul { padding-left: 1.25rem; }
+
+main.article li { margin-bottom: 0.3rem; }
+
+main.article h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin: 2rem 0 0.75rem;
+}
+
+main.article h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+main.article blockquote {
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 1rem;
+  border-left: 3px solid var(--accent);
+  font-size: 1.1rem;
+}
+
+main.article blockquote p { margin: 0; }
+
+main.article blockquote a { font-size: 0.85rem; white-space: nowrap; }
+
+main.article a { color: var(--accent); }
 
 /* ── Footer ── */
 
