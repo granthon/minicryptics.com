@@ -2,10 +2,15 @@ baseURL = "https://minicryptics.com/"
 locale = "en-gb"
 title = "Mini Cryptics"
 disableKinds = ["section", "taxonomy", "term"]
+enableRobotsTXT = true
 
 [params]
     crosshareUser = "f27wo8YkW8cgES1kA2gUlbLJSL73"
-    description = "Free mini cryptic crosswords, on five-by-five grids — quick solves, satisfying wordplay."
+    description = "Free mini cryptic crosswords by tuber, mostly on 5×5 grids — quick five-minute solves with satisfying wordplay, plus setter’s notes explaining every clue."
 
 [outputFormats.RSS]
     baseName = "feed"
+
+[sitemap]
+    changeFreq = "weekly"
+    priority = 0.5

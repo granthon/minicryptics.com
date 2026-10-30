@@ -26,5 +26,6 @@
     "dates"  (dict "date" (time.AsTime (replace .date " GMT" " +0000")))
     "params" (dict "puzzleid" .id)
     "description" $desc
+    "sitemap" (dict "priority" 0.5 "changeFreq" "weekly")
   ) }}
 {{ end }}

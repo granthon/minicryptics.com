@@ -40,6 +40,8 @@ The page embeds `https://crosshare.org/embed/{puzzleid}/{crosshareUser}` in an i
 
 Both `layouts/index.html` and `layouts/puzzle/single.html` include the shared `layouts/partials/head.html` partial, which emits the `description`/`og:` meta tags and the favicon link (`/favicon.512.png`, served from `static/`). The partial resolves the description as `or .Description .Site.Params.description`: puzzle pages get their own description (set by the content adapter), and pages without one (e.g. the homepage) fall back to the site-wide default. That default lives in `hugo.toml` under `[params].description` — **not** the top-level `description` key — so keep it there.
 
+The partial also emits a `<link rel="canonical">`, which matters because the clue text duplicates Crosshare's. `layouts/robots.txt` (enabled by `enableRobotsTXT`) points crawlers at the sitemap. Sitemap priority comes from `[sitemap]` in `hugo.toml` for the homepage, but content-adapter pages ignore that default, so the adapter sets `sitemap` on each puzzle page itself.
+
 ## Adding puzzles manually
 
 To backfill historical puzzles (not in the RSS feed), add entries to `data/puzzles.yaml` by hand in the same `id`/`title`/`date` format, newest first. See the comment block at the top of that file.

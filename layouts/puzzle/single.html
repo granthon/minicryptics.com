@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} — {{ .Site.Title }}</title>
+  {{/* "Cryptics by tuber: 5x5 #56" → "Cryptic crossword 5x5 #56 by tuber — Mini Cryptics" */}}
+  {{ $short := replaceRE `^Cryptics by tuber:\s*` "" .Title }}
+  <title>{{ if ne $short .Title }}Cryptic crossword {{ $short }} by tuber{{ else }}{{ .Title }}{{ end }} — {{ .Site.Title }}</title>
   {{ partial "head.html" . }}
   <link rel="stylesheet" href="/css/style.css">
 </head>
