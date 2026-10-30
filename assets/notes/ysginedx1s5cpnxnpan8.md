@@ -1,4 +1,4 @@
-A bigger grid this time. I'm aware of a few shortcomings here, which I've owned up to at the end — and for 9 Across, both FLYERS and FLIERS are accepted, as nothing in the wordplay or the crossing letters picks one over the other.
+A bigger grid this time. I'm aware of a few shortcomings here, which I've owned up to at the end.
 
 **Across**
 

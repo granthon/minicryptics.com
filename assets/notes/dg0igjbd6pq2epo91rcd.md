@@ -1,4 +1,4 @@
-I hope this one's fun even if you don't manage to fill in every square. One confession: 15 Down was nearly "Big gun fired off in musical work", but I wasn't convinced "fired off" works as a homophone indicator, so I settled for something slightly less apposite.
+I hope this one's fun even if you don't manage to fill in every square. 15 Down was nearly "Big gun fired off in musical work", but I wasn't convinced "fired off" works as a homophone indicator, so I settled for something slightly less apposite.
 
 **Across**
 
