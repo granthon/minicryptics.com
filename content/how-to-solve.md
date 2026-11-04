@@ -31,7 +31,7 @@ Clues use a fairly small set of tricks. Words in the clue that tell you which tr
 
 Little pieces, put together in order, like CAR-GO up above.
 
-> Feathers cause fruit to ripen (7) — from [7×7 #7](/puzzle/dk2bbtnahqlrx9oanhs0/)
+> *Feathers* cause fruit to ripen (7) — from [7×7 #7](/puzzle/dk2bbtnahqlrx9oanhs0/)
 
 ||"fruit" = PLUM + "to ripen" = AGE makes PLUMAGE, defined by "feathers."||
 
@@ -41,25 +41,25 @@ There is no indicator here: words in the clue are simply replaced with short syn
 
 The letters of some words are rearranged. There are hundreds of possible indicators, but look for anything suggesting disorder, error, damage, cooking, dancing, drunkenness or the like: "off", "wild", "cooked", "badly", "swinging"…
 
-> *Titanic* set him off: "so will nine be saved?" (1, 6, 2, 4) — from [13×13 #3](/puzzle/bmpzfi9sbtnqk0gp8orf/)
+> Unusually cruel *punishment for the stressed?* (5) — from [11×11 #4](/puzzle/egsnmvrdhzhlm8za2poa/)
 
-||An anagram ("off") of TITANIC SET HIM — A STITCH IN TIME, which as the proverb goes, saves nine.||
+||"Unusually" tells us we're looking for an anagram of CRUEL.  That gives us ULCER.
 
 ### Hidden words
 
 The answer is sitting right there in the clue, running across the gaps between words. Indicators include "some", "in", "part of", "holding" or "eating".
 
-> Euclideans were grasping solution (6) 
+> Euclideans were grasping *solution* (6)
 
-||Hidden ("grasping") in "euclideANSWERe" — ANSWER, defined by "solution."||
+||Hidden ("grasping") in "euclideANSWERe" — ANSWER||
 
 ### Double definitions
 
 Two definitions of the same word, side by side, with no wordplay at all.
 
-> Allow entry to make a confession (5) — from [5×5 #22](/puzzle/4udayk0ubf1a0pp8thea/)
+> Allow entry to make confession (5) — from [5×5 #22](/puzzle/4udayk0ubf1a0pp8thea/)
 
-||"Allow entry" = ADMIT, and "make a confession" = ADMIT.||
+||"Allow entry" = ADMIT, and "to make confession" = ADMIT.||
 
 Sometimes these clues can be as short as two words:
 
@@ -71,9 +71,9 @@ Rarely, you might see variants of this idea with triple definitions, quadruples,
 
 ### Containers
 
-One piece goes inside another. Watch for "in", "taking in", "holding", "about", "outside", "grabs", "swallowing" and similar words.
+One piece goes inside another. Look for "inside", "taking in", "holding", "about", "outside", "grabs", "swallowing" and similar words.
 
-> 'Moderate' King taking in Hollywood location (5) — [5×5 #51](/puzzle/c05lmzgubjeccs73jurg/)
+> *'Moderate'* King taking in Hollywood location (5) — [5×5 #51](/puzzle/c05lmzgubjeccs73jurg/)
 
 ||"Hollywood location" = LA, inside "King" = REX — RELAX, "moderate".||
 
@@ -81,7 +81,7 @@ One piece goes inside another. Watch for "in", "taking in", "holding", "about", 
 
 A word written backwards: "back", "returning", "recalled", "on the way back", or, in a Down clue, "up" or "rising".
 
-> Tuber recalled days of spring (3) — [5×5 #46](/puzzle/bi8bo3czuw6psriynim9/)
+> Tuber recalled *days of spring* (3) — [5×5 #46](/puzzle/bi8bo3czuw6psriynim9/)
 
 ||"Tuber" = YAM, reversed ("recalled") — MAY.||
 
@@ -89,7 +89,7 @@ A word written backwards: "back", "returning", "recalled", "on the way back", or
 
 The answer sounds like something else, albeit often in a far-fetched way. Look out for indicators to do with hearing, such as "we hear", "on the radio", "overheard", "reportedly".
 
-> Overheard elevated murmuring sound of poetry (5) — [5×5 #49](/puzzle/akms91vct3e0dn44oh0t/)
+> Overheard elevated murmuring sound of *poetry* (5) — [5×5 #49](/puzzle/akms91vct3e0dn44oh0t/)
 
 ||Sounds like ("overheard") "elevated" = HIGH + "murmuring sound" = COO — HAIKU, a form of poetry.||
 
@@ -97,7 +97,7 @@ The answer sounds like something else, albeit often in a far-fetched way. Look o
 
 Take a letter, or a bit, away from a word: "endless", "doesn't end", "headless", "without...", "losing...", etc.  Often, the centre of a word is removed to leave its first and last letters: "empty bottle" = B~~ottl~~E; "schoolboy on vacation" = S~~choolbo~~Y
 
-> Contest doesn't end level (4) — [11×11 #5](/puzzle/elvqwwg1zk0jqaqygkjx/)
+> *Contest* doesn't end level (4) — [11×11 #5](/puzzle/elvqwwg1zk0jqaqygkjx/)
 
 ||"Contest" = EVENT, without its end — EVEN, "level".||
 
@@ -105,7 +105,7 @@ Take a letter, or a bit, away from a word: "endless", "doesn't end", "headless",
 
 Use particular letters from the clue: first letters ("initially", "heads", "leaders"), last letters ("finally", "tails"), outside letters ("case", "edges", "empty"), or every other letter ("odd", "even", "regularly").
 
-> Some of Rodney's toys initially put in order (4) — [5×5 #24](/puzzle/xtsmybramgd95pb7bipn/)
+> Some of Rodney's toys initially *put in order* (4) — [5×5 #24](/puzzle/xtsmybramgd95pb7bipn/)
 
 ||The initial letters of "Some Of Rodney's Toys" — SORT, "put in order".||
 
@@ -121,20 +121,20 @@ No wordplay: just a single definition with a misleading twist. A question mark a
 
 The rarest, and (some say) most satisfying: the whole clue is the definition *and* the whole clue does double-duty as word play as well. Setters and solvers call these *&lit*, which stands for "and literally true."  Any of the above wordplay types could be employed in an &lit clue.
 
-> They're foremost in altitude, lofty peaks, and snow (4) — [5×5 #45](/puzzle/b8oqitnouugme2pj76y4/)
+> They're foremost in altitude, lofty peaks and snow (4) — [5×5 #45](/puzzle/b8oqitnouugme2pj76y4/)
 
 ||The first letters ("foremost") of "Altitude, Lofty Peaks" and "Snow" spell ALPS; and the whole clue describes them too.||
 
 ### Rarities and others
 
-This list is by no means exhaustive - there are plenty of other tricks hiding up the setter's sleeve.  Spoonerisms, cockneyisms (often dropped H's), palindromes, letter-cycling, rebuses and more.  But of course, part of the joy of crosswords is in learning as you go.
+This list is by no means exhaustive - there are plenty of other tricks hiding up the setter's sleeve.  Spoonerisms, cockneyisms (usually dropped H's or rhyming slang), palindromes, letter-cycling, rebuses and more.  But of course, part of the joy of crosswords is in learning as you go.
 
 ## Common abbreviations
 
 Charades lean heavily on short bits of crosswordese. A few that turn up a lot in these puzzles:
 
 - **One**: I (or A)
-- **Small**: S
+- **Small, Medium, Large**: S, M, L
 - **Right**, **left**: R, L
 - **Conservative**, **Liberal**: C, L
 - **Doctor**: DR (or MO, MB)
@@ -150,7 +150,9 @@ Charades lean heavily on short bits of crosswordese. A few that turn up a lot in
 - **King**: K, R, or REX
 - **Setter**, **me**: ME, I; **setter's** is MY
 
-You'll pick up the rest as you go, and on this site, the setter's notes on each puzzle spell them out.
+The NATO phonetic alphabet crops up too - Echo for E, Hotel for H, Oscar for O, Tango for T, and so on.
+
+You'll pick up the rest as you go, and on this site, the setter's notes below each puzzle spell them out.
 
 ## Getting started
 
